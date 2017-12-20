@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Judit Altimir Asignment 4</title>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">      
+       <!-- Include jQuery Mobile stylesheets -->
+            <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.4.5.min.css">
+            <!-- Include the jQuery library -->
+            <script src="js/jquery-2.1.0.js"></script>
+            <!-- Include the jQuery Mobile library -->
+            <script src="jquerymobile/jquery.mobile-1.4.5.min.js"></script>	
+				<link rel="stylesheet" href="css/estils.css" />
+				<link rel="stylesheet" href="css/estils.min.css" />
+				<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />   
+    </head>
+    <body>
+	
+<!-- MOVIES -->
+
+<div data-role="page" id="page1">
+  <div data-role="header">
+    <h1>MoviesApp</h1>
+  </div>
+    <div data-role="panel" id="myPanel">
+		<h2>MENU</h2>
+        <a href="#page3" class="ui-btn">List of Favourites</a>
+		<a href="#page1" class="ui-btn">List of Movies</a>
+    </div>
+	
+    <div data-role="main" class="ui-content">
+     <a href="#myPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all"></a>
+	 <br>
+	</div>
+	
+    <div data-role="main" class="ui-content">
+     <div data-role="header">
+      <ul data-role="listview" id="mylist" class="ui-grid-a"></ul>
+     </div>
+    </div>
+
+</div>
+     
+	 
+<!-- DETAILS -->	 
+<div data-role="page" id="page2">
+  <div data-role="header">
+    <h1>Details</h1>
+  </div>
+
+  <div data-role="panel" id="myPanel">
+	<h2>MENU</h2>
+    <a href="#page3" class="ui-btn">List of Favourites</a>
+	<a href="#page1" class="ui-btn">List of Movies</a>
+  </div>
+   	
+  <div data-role="main" class="ui-content">
+	<a href="#myPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all"></a>
+	<input id="submit" type="button" value="Add to Favourites" onclick="insertDb();" class="ui-btn ui-icon-star ui-btn-icon-text ui-btn-icon-right ui-corner-all">
+  </div>
+  
+  <div data-role="main" class="ui-content">
+   <div data-role="header">
+    <ul id="mylistdetails"></ul>
+   </div>
+  </div>
+  
+</div>
+		
+		
+<!-- FAVOURITES -->
+<div data-role="page" id="page3">
+  <div data-role="header">
+    <h1>List of Favourites</h1>
+  </div>
+
+  <div data-role="panel" id="myPanel">
+	<h2>MENU</h2>
+    <a href="#page3" class="ui-btn">List of Favourites</a>
+	<a href="#page1" class="ui-btn">List of Movies</a>
+  </div>
+   
+  <div data-role="main" class="ui-content">
+	<a href="#myPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all"></a>
+	<br><br>
+  </div>
+  
+  <div data-role="main" class="ui-content">
+    <div data-role="header">
+     <ul id="myfavoritelist"></ul>
+    </div>
+  </div>
+
+</div>        
+    
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
